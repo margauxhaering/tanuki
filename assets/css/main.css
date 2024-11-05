@@ -1847,7 +1847,7 @@ responsive
 
 @media (max-width: 767px) {
   .main-banner {
-    padding: 200px 0 400px 0;
+    padding: 120px 0 300px 0;
   }
   .main-banner ul.categories li a {
     color: transparent;
