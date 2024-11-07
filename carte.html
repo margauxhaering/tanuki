@@ -20,6 +20,7 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/animated.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   </head>
 
@@ -51,7 +52,7 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
-              <li><a href="carte.html" class="active">Carte</a></li>
+              <li><a href="carte.html"  class="active">Carte</a></li>
               <li><a href="shop.html">Boutique</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="contact.html"></a></li>
@@ -69,58 +70,239 @@
 
   <div class="main-carte">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div>
-            <h2>Carte du salon</h2>
-          </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div>
+          <h2>Carte du salon</h2>
+        </div>
+      </div>
+
+    </div>
+    <div class="container2">
+
+        <!-- Sidebar with categories -->
+        <div class="sidebar">
+            <ul>
+                <li onclick="showItems('the')"><b>Thés</b></li>
+                <li onclick="showItems('cafe')"><b>Cafés</b></li>
+                <li onclick="showItems('lait')"><b>Avec du lait</b></li>
+                <li onclick="showItems('softs')"><b>Softs</b></li>
+                <li onclick="showItems('supplements')"><b>Suppléments</b></li>
+            </ul>
         </div>
 
-      </div>
+        <div class="content" id="content">
 
-      <div class="cards-container">
-          <div class="card">
-              <h3 style="color:#2C474B;">Cafe latte</h3>
-              <div class="separator"></div>
-               <img src="assets/images/latte.jpg">
-              <br>
-              <p>5 e</p>
-          </div>
-          <div class="card">
-              <h3 style="color:#2C474B;">Cappucino</h3>
-              <div class="separator"></div>
-              <img src="assets/images/capu.jpg">
-              <br>
-              <p>6 e</p>
-          </div>
-          <div class="card">
-              <h3  style="color:#2C474B;">Matcha latte</h3>
-              <div class="separator"></div>
-              <img src="assets/images/matcha.jpg">
-              <br>
-              <p>5.5 e</p>
-          </div>
-
-          <div class="card">
-              <h3 style="color:#2C474B;">The</h3>
-              <div class="separator"></div>
-              <img src="assets/images/the.png">
-              <br>
-              <p>3.5 e</p>
-          </div>
+            </div>
 
 
-          <div class="card">
-              <h3 style="color:#2C474B;">Cafe au lait</h3>
-              <div class="separator"></div>
-              <img src="assets/images/cafelait.jpg">
-              <br>
-              <p>4 e</p>
-          </div>
-      </div>
+        </div>
     </div>
-  </div>
 
+
+  </div>
+ <script>
+
+ function showItems(category) {
+     const content = document.getElementById("content");
+
+     let items = "";
+
+     if (category === "the") {
+         items = `
+             <h2>Thés</h2>
+             <div class="cards-container">
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Mug</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/mug.jpg" alt="Mug Thé">
+                     <p>3.2 €<br>
+                     3.7 € - glacé</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Théiere</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/theiere.jpg" alt="Théiere">
+                     <p>5.8 € - 0.6L<br>
+                      7.2 € - 1.5L</p>
+                 </div>
+             </div>
+
+             <div class="menu-bois">
+                <div class="menu-bois-item" onclick="toggleDescription(0)">
+                  <h3>Thés noirs</h3>
+                  <div class="description">
+                    <p>- English breakfast <br> - Vanille <br> - Earl Grey <br> - Duo sucré (abricot/pêche) <br> - Flage (orange) <br> - Grande Terre (passion/papaye) <br> - Coco cream <i class="fa-solid fa-snowflake"></i></p>
+                  </div>
+                </div>
+                <div class="menu-bois-item" onclick="toggleDescription(1)">
+                  <h3>Thés verts</h3>
+                  <div class="description">
+                    <p>- China Sencha Lu Yu <br> - Jasmin <br> - Douceur de Pyc (amande/vanille) <br> - Pink Crazy (fraise/framboise) <br> - Coup de boost (citron/abricot) <br> - Trésor des iles (mangue/passion) <i class="fa-solid fa-snowflake"></i> <br> - Diabolo (menthe) <i class="fa-solid fa-snowflake"></i> <br> - Cocktail d'été (fraise/vanille) <i class="fa-solid fa-snowflake"></i> <br> - Compotée de fruits (fraises/pêche) <i class="fa-solid fa-snowflake"></i></p>
+                  </div>
+                </div>
+                <div class="menu-bois-item" onclick="toggleDescription(2)">
+                  <h3>Thés blancs</h3>
+                  <div class="description">
+                    <p>- Vietnam Mao Feng <br> - Exotique (orange/mangue) <br> - Full Moon (pamplemousse/citron) </p>
+                  </div>
+                </div>
+                <div class="menu-bois-item" onclick="toggleDescription(3)">
+                  <h3>Oolong (Chine)</h3>
+                  <div class="description">
+                    <p>- Nature <br> - Lavande</p>
+                  </div>
+                </div>
+                <div class="menu-bois-item" onclick="toggleDescription(4)">
+                  <h3>Rooibos</h3>
+                  <div class="description">
+                    <p>- Nature <br> - Le glouton (coco/ananas) <br> - Haut vignoble (pêche/chocolat) </p>
+                  </div>
+                </div>
+                <div class="menu-bois-item" onclick="toggleDescription(5)">
+                  <h3>Infusions</h3>
+                  <div class="description">
+                    <p>- Garlaban (olivier/verveine/mélisse) <br> - Comme avant (mangue/passion/orange) <br> - La nectarine (pêche/menthe) <br> - Douceur d'antan (framboise/caramel) <br> - Fruitée (fraise, pêche, ananas) <i class="fa-solid fa-snowflake"></i> <br> - Symphonie sauvage (framboise) <i class="fa-solid fa-snowflake"></i></p>
+                  </div>
+                </div>
+                <div class="menu-bois-item" onclick="toggleDescription(6)">
+                  <h3>Tisanes</h3>
+                  <div class="description">
+                    <p>- Happy day <br> - Fraicheur du sud <br> - Ayurvéridique 'Keep cool' <br> - Ma digestion <br> - Esprit libre <br> - Articulations <br> - Camomille </p>
+                  </div>
+                </div>
+              </div>
+              <div> <i class="fa-solid fa-snowflake"></i> : disponible en glacé</div>`;
+     } else if (category === "cafe") {
+         items = `
+             <h2>Cafés</h2>
+             <div class="cards-container">
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Crème</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/latte.jpg" alt="Café Latte">
+                     <p>2.8 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Grand crème</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/cafelait.jpg" alt="Café au Lait">
+                     <p>3.3 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Cappuccino</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/capu.jpg" alt="Cappuccino">
+                     <p>4 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Latte macchiato <i class="fa-solid fa-snowflake"></i></h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/matcha.jpg" alt="Matcha Latte">
+                     <p>4.7 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Moka latte</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/cafelait.jpg" alt="Café au Lait">
+                     <p>5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Viennois</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/cafelait.jpg" alt="Café au Lait">
+                     <p>4.5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Caramel macchiato <i class="fa-solid fa-snowflake"></i></h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/cafelait.jpg" alt="Café au Lait">
+                     <p>5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Classiques</h3>
+                     <p> Expresso : 2 € <br> Allongé : 2.5 € <br> Noisette : 2.5 € </p>
+                 </div>
+             </div>`;
+     } else if (category === "lait") {
+         items = `
+             <h2>Avec du lait</h2>
+             <div class="cards-container">
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Chcolat chaud</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/lait_amande.jpg" alt="Lait d'Amande">
+                     <p>4.5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Matcha latte</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/lait_soja.jpg" alt="Lait de Soja">
+                     <p>5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Chaï latte</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/lait_coco.jpg" alt="Lait de Coco">
+                     <p>5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Lait au sirop</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/lait_soja.jpg" alt="Lait de Soja">
+                     <p>3.5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Golden latte</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/lait_coco.jpg" alt="Lait de Coco">
+                     <p>5 €</p>
+                 </div>
+                 <div class="card">
+                     <h3 style="color:#2C474B;">Dirty chaï</h3>
+                     <div class="separator"></div>
+                     <img src="assets/images/lait_soja.jpg" alt="Lait de Soja">
+                     <p>7 €</p>
+                 </div>
+             </div>
+             <div> <br><br>Tous sont disponibles glacés et en lait de vache ou végétal</div>`;
+     } else if (category === "softs") {
+         items = `
+             <h2>Softs</h2>
+             <div class="cards-container">
+                 <div class="card2">
+                     <p>Eau (50mL) : 2 € <br>Soda (33mL) : 3 € <br>Jus de fruits (25mL) : 3.5 € <br>Sirop : 2.7 € <br>Eau de coco (33mL) : 3 € <br></p>
+                 </div>
+             </div>`;
+     } else if (category === "supplements") {
+         items = `
+             <h2>Suppléments</h2>
+             <div class="cards-container">
+                 <div class="card2">
+                     <p>Lait végétal : 0.5 € <br>Pot de lait : 0.5 € <br>Chantilly : 0.5 € <br>Chamallow : 0.5 € <br>Sirop/coulis : 0.3 € <br></p>
+                 </div></div>`;
+     }
+
+     // Update the content area with the selected category's items
+     content.innerHTML = items;
+ }
+
+ function toggleDescription(index) {
+  const descriptions = document.querySelectorAll('.description');
+
+  descriptions.forEach((desc, i) => {
+    if (i === index) {
+      // Toggle display of the selected description
+      desc.style.display = desc.style.display === 'none' || !desc.style.display ? 'block' : 'none';
+    } else {
+      // Hide other descriptions
+      desc.style.display = 'none';
+    }
+  });
+}
+
+ </script>
 
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
