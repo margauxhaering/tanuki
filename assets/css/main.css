@@ -1366,7 +1366,7 @@ responsive
 
   /* Sidebar */
   .sidebar {
-      width: 30%;
+      width: 20%;
       background-color: transparent;
       color: white;
       padding: 20px;
@@ -1395,7 +1395,7 @@ responsive
 
   /* Content area */
   .content {
-      width: 70%;
+      width: 80%;
       padding: 20px;
       box-sizing: border-box;
       background-color: transparent;
@@ -1447,4 +1447,70 @@ responsive
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
+  }
+
+  /*
+  ---------------------------------------------
+boutique
+  ---------------------------------------------
+  */
+  #panier {
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+  }
+
+  #panier-content p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+
+  .panier-total {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #6A5535;
+  }
+
+  .panier-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.panier-item span {
+  font-size: 16px;
+}
+
+.panier-item button {
+  padding: 5px;
+  background-color: #6A5535;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.panier-item button:hover {
+  background-color: #1F3439;
+}
+
+
+  .btn-panier {
+    background-color: #6A5535;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .btn-panier:hover {
+    background-color: #7E694A;
   }
