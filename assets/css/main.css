@@ -979,7 +979,8 @@ Banner Style
   background-position: center center;
   background-size: cover;
   background-image: url(../images/8.jpg);
-  padding: 200px 0px 600px 0px;
+  padding: 100px 0px 600px 0px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -991,7 +992,7 @@ Banner Style
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(252, 226, 190, 0.5);
+  background-color: rgba(252, 226, 190, 0.7);
 }
 
 .main-contact > * {
@@ -1414,6 +1415,15 @@ responsive
 
 @media (max-width: 400px) {
 
+
+
+  .main-contact {
+
+    background-position: center left;
+
+    padding: 100px 0px 600px 0px;
+
+  }
 
   .main-banner ul.categories {
     padding-left: 30px;
