@@ -184,7 +184,7 @@
 	 * @public
 	 */
 	Owl.Defaults = {
-		items: 3,
+		items: 4,
 		loop: false,
 		center: false,
 		rewind: false,
@@ -2432,11 +2432,11 @@
 		html.attr( 'height', height );
 		html.attr( 'width', width );
 		if (video.type === 'youtube') {
-			html.attr( 'src', '//www.youtube.com/embed/' + video.id + '?autoplay=1&rel=0&v=' + video.id );
+			html.attr( 'src', '//www.youtube.com/embed/' + video.id + '?autoplay=flase&rel=0&v=' + video.id );
 		} else if (video.type === 'vimeo') {
-			html.attr( 'src', '//player.vimeo.com/video/' + video.id + '?autoplay=1' );
+			html.attr( 'src', '//player.vimeo.com/video/' + video.id + '?autoplay=false' );
 		} else if (video.type === 'vzaar') {
-			html.attr( 'src', '//view.vzaar.com/' + video.id + '/player?autoplay=true' );
+			html.attr( 'src', '//view.vzaar.com/' + video.id + '/player?autoplay=false' );
 		}
 
 		iframe = $(html).wrap( '<div class="owl-video-frame" />' ).insertAfter(item.find('.owl-video'));
@@ -2719,7 +2719,7 @@
 	 */
 	Autoplay.Defaults = {
 		autoplay: false,
-		autoplayTimeout: 5000,
+		autoplayTimeout: 50000000, /*reduce here for the timeout*/
 		autoplayHoverPause: false,
 		autoplaySpeed: false
 	};
