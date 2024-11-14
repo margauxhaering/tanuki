@@ -819,7 +819,7 @@ Banner Style
 
 .main-banner {
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 40%;
   background-size: cover;
   background-image: url(../images/bgd1.jpg);
   height: 100vh;
