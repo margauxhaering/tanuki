@@ -45,13 +45,16 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-            </a>
+
+            <div class="logo-text-container">
+                    <a href="index.html" class="logo"></a>
+                    <span class="cafe-botanique">Café botanique</span>
+</div>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
-              <li><a href="carte.html" >Carte</a></li>
+              <li><a href="carte.html">Carte</a></li>
               <li><a href="shop.html" class="active">Boutique</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="contact.html"></a></li>
@@ -78,6 +81,10 @@
 
 
   <!-- Scripts -->
+  <script>
+  window.history.pushState({}, "", "/shop");
+
+  </script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
